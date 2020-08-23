@@ -4,10 +4,10 @@ using System.Text;
 
 namespace BinaryWatch101
 {
-    class BinaryTime : Time
+   public class BinaryTime : Time
     {
-        private Number _binaryHour;
-        public Number BinaryHour
+        private int _binaryHour;
+        public int BinaryHour
         {
             get
             {
@@ -15,8 +15,8 @@ namespace BinaryWatch101
             }
         }
 
-        private Number _binaryMinute;
-        public Number BinaryMinute
+        private int _binaryMinute;
+        public int BinaryMinute
         {
             get
             {
@@ -24,8 +24,8 @@ namespace BinaryWatch101
             }
         }
 
-        private Number _binarySecond;
-        public Number BinarySecond
+        private int _binarySecond;
+        public int BinarySecond
         {
             get
             {
@@ -34,6 +34,13 @@ namespace BinaryWatch101
         }
 
         public BinaryTime() : base() { }
+
+        public BinaryTime(int binaryHour, int binaryMinute, int binarySecond)
+        {
+            _binaryHour = binaryHour;
+            _binaryMinute = binaryMinute;
+            _binarySecond = binarySecond;
+        }
 
         public override void UpdateTime()
         {
@@ -44,14 +51,14 @@ namespace BinaryWatch101
 
         private void ConvertToBinary()
         {
-            _binaryHour.Ones = Int32.Parse(Convert.ToString(Hour.Ones, 2));
-            _binaryHour.Tens = Int32.Parse(Convert.ToString(Hour.Tens, 2));
+            //_binaryHour.Ones = Int32.Parse(Convert.ToString(Hour.Ones, 2));
+            //_binaryHour.Tens = Int32.Parse(Convert.ToString(Hour.Tens, 2));
 
-            _binaryMinute.Ones = Int32.Parse(Convert.ToString(Minute.Ones, 2));
-            _binaryMinute.Tens = Int32.Parse(Convert.ToString(Minute.Tens, 2));
+            //_binaryMinute.Ones = Int32.Parse(Convert.ToString(Minute.Ones, 2));
+            //_binaryMinute.Tens = Int32.Parse(Convert.ToString(Minute.Tens, 2));
 
-            _binarySecond.Ones = Int32.Parse(Convert.ToString(Second.Ones, 2));
-            _binarySecond.Tens = Int32.Parse(Convert.ToString(Second.Tens, 2));
+            //_binarySecond.Ones = Int32.Parse(Convert.ToString(Second.Ones, 2));
+            //_binarySecond.Tens = Int32.Parse(Convert.ToString(Second.Tens, 2));
         }
     }
 }

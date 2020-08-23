@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BinaryWatch101
 {
-    class Time
+   public class Time
     {
 
         private int _hour;
@@ -37,19 +37,19 @@ namespace BinaryWatch101
         public virtual void UpdateTime()
         {
             DateTime timeNow = DateTime.Now;
-            if(_hour=10)
-            {
+            //if(_hour=10)
+            //{
 
-            }
+            //}
 
-            _hour.Tens = timeNow.Hour / 10;
-            _hour.Ones = timeNow.Hour % 10;
+            //_hour.Tens = timeNow.Hour / 10;
+            //_hour.Ones = timeNow.Hour % 10;
 
-            _minute.Tens = timeNow.Minute / 10;
-            _minute.Ones = timeNow.Minute % 10;
+            //_minute.Tens = timeNow.Minute / 10;
+            //_minute.Ones = timeNow.Minute % 10;
 
-            _second.Tens = timeNow.Second / 10;
-            _second.Ones = timeNow.Second % 10;
+            //_second.Tens = timeNow.Second / 10;
+            //_second.Ones = timeNow.Second % 10;
         }
     }
 }
