@@ -2,12 +2,15 @@
 
 namespace BinaryWatch101
 {
-    class Program
+   public class Program
     {
-        public BinaryTime time;
+        //public BinaryTime time;
 
         static void Main(string[] args)
         {
+            BinaryTime time = new BinaryTime(DateTime.Now);
+            Console.WriteLine(time.ToString());
+            
             //need a loop to make canvas out of 6 Rec
             Draw.RectangleFromTop(2, 2, 4, 2, ConsoleColor.DarkYellow);
 
@@ -95,14 +98,6 @@ namespace BinaryWatch101
             }
         }
 
-        /// <summary>
-        /// Draws a rectangle in a console window using the top line of the buffer as the offset.
-        /// </summary>
-        /// <param name="xLocation">The left side position.</param>
-        /// <param name="yLocation">The top position.</param>
-        /// <param name="width">The width of the rectangle.</param>
-        /// <param name="height">The right of the rectangle.</param>
-        /// <param name="color">The color to use. null=uses current color Default: null</param>
         public static void RectangleFromTop(
             int width,
             int height,

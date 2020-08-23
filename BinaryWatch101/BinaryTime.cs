@@ -25,6 +25,8 @@ namespace BinaryWatch101
         }
 
         private int _binarySecond;
+        private DateTime now;
+
         public int BinarySecond
         {
             get
@@ -40,6 +42,11 @@ namespace BinaryWatch101
             _binaryHour = binaryHour;
             _binaryMinute = binaryMinute;
             _binarySecond = binarySecond;
+        }
+
+        public BinaryTime(DateTime now)
+        {
+            this.now = now;
         }
 
         public override void UpdateTime()
